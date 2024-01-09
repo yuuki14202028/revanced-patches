@@ -88,7 +88,7 @@ object JsonHookPatch : BytecodePatch(
                     ) throw InvalidClassException(classDef.type, "Not a hook class")
 
                 }
-            } ?: throw ClassNotFoundException("Failed to find hook class in ${context.classes.map { c -> c.type }}")
+            } ?: throw ClassNotFoundException("Failed to find hook class in ${context.classes.filter { it.type.startsWith("Lapp/revanced/twitter/patches/hook/patch") }.map { c -> c.type }}")
         }
     }
 
