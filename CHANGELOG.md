@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/yuuki14202028/revanced-patches/compare/v1.1.0...v1.2.0) (2024-01-09)
+
+
+### Features
+
+* Blueユーザーを非表示にする機能を追加。 ([5b03c59](https://github.com/yuuki14202028/revanced-patches/commit/5b03c59ab1a735fd7c15092d86d4b93a777e6222))
+
 # [1.1.0](https://github.com/yuuki14202028/revanced-patches/compare/v1.0.0...v1.1.0) (2024-01-09)
 
 
