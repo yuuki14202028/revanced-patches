@@ -127,3 +127,4 @@ node_modules/
 
 # Ignore IDEA files
 .idea/
+/src/main/kotlin/com/github/yuuki14202028/patches/example/twitter/

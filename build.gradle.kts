@@ -22,6 +22,10 @@ dependencies {
     // Used in JsonGenerator.
     implementation(libs.gson)
 
+    // https://mvnrepository.com/artifact/org.json/json
+    implementation("org.json:json:20231013")
+
+
     // A dependency to the Android library unfortunately fails the build, which is why this is required.
     compileOnly(project("dummy"))
 }
