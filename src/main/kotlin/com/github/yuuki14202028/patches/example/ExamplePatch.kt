@@ -6,11 +6,9 @@ import app.revanced.patcher.patch.annotation.CompatiblePackage
 import app.revanced.patcher.patch.annotation.Patch
 
 @Patch(
-    name = "Example Patch",
+    name = "最強のPatch",
     description = "This is an example patch to start with.",
-    compatiblePackages = [
-        CompatiblePackage("com.example.app", ["1.0.0"]),
-    ],
+    compatiblePackages = [CompatiblePackage("com.twitter.android")]
 )
 @Suppress("unused")
 object ExamplePatch : BytecodePatch() {
