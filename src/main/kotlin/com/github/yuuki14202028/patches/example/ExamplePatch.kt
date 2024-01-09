@@ -1,4 +1,4 @@
-package your.org.patches.example
+package com.github.yuuki14202028.patches.example
 
 import app.revanced.patcher.data.BytecodeContext
 import app.revanced.patcher.patch.BytecodePatch

@@ -5,7 +5,7 @@ plugins {
     `maven-publish`
 }
 
-group = "your.org"
+group = "com.github.yuuki14202028"
 
 repositories {
     mavenCentral()
@@ -32,14 +32,13 @@ kotlin {
 
 tasks.withType(Jar::class) {
     manifest {
-        attributes["Name"] = "Your Patches"
+        attributes["Name"] = "Yuuki14202028 Patches"
         attributes["Description"] = "Patches for ReVanced."
         attributes["Version"] = version
         attributes["Timestamp"] = System.currentTimeMillis().toString()
-        attributes["Source"] = "git@github.com:you/revanced-patches.git"
-        attributes["Author"] = "You"
-        attributes["Contact"] = "contact@your.homepage"
-        attributes["Origin"] = "https://your.homepage"
+        attributes["Source"] = "git@github.com:yuuki14202028/revanced-patches.git"
+        attributes["Author"] = "Yuuki14202028"
+        attributes["Contact"] = "yuuki14202028@gmail.com"
         attributes["License"] = "GNU General Public License v3.0"
     }
 }
@@ -82,9 +81,8 @@ publishing {
             from(components["java"])
 
             pom {
-                name = "Your Patches"
+                name = "Yuuki14202028 Patches"
                 description = "Patches for ReVanced."
-                url = "https://your.homepage"
 
                 licenses {
                     license {
@@ -94,15 +92,15 @@ publishing {
                 }
                 developers {
                     developer {
-                        id = "Your ID"
-                        name = "Your Name"
-                        email = "contact@your.homepage"
+                        id = "yuuki14202028"
+                        name = "Yuuki14202028"
+                        email = "yuuki14202028@gmail.com"
                     }
                 }
                 scm {
-                    connection = "scm:git:git://github.com/you/revanced-patches.git"
-                    developerConnection = "scm:git:git@github.com:you/revanced-patches.git"
-                    url = "https://github.com/you/revanced-patches"
+                    connection = "scm:git:git://github.com/yuuki14202028/revanced-patches.git"
+                    developerConnection = "scm:git:git@github.com:yuuki14202028/revanced-patches.git"
+                    url = "https://github.com/yuuki14202028/revanced-patches"
                 }
             }
         }
