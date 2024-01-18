@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/yuuki14202028/revanced-patches/compare/v1.5.0...v1.6.0) (2024-01-18)
+
+
+### Features
+
+* debug ([a4f72fd](https://github.com/yuuki14202028/revanced-patches/commit/a4f72fd6a918a61ba201b83178ab5110c669e982))
+
 # [1.5.0](https://github.com/yuuki14202028/revanced-patches/compare/v1.4.0...v1.5.0) (2024-01-18)
 
 
