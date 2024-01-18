@@ -1,6 +1,7 @@
 package com.github.yuuki14202028.patches.example.fluent
 
 import app.revanced.patcher.data.ResourceContext
+import app.revanced.patcher.patch.PatchException
 import app.revanced.patcher.patch.ResourcePatch
 import app.revanced.patcher.patch.annotation.CompatiblePackage
 import app.revanced.patcher.patch.annotation.Patch
@@ -16,13 +17,11 @@ import java.nio.file.Paths
 object FluentEmojiPatch : ResourcePatch() {
     override fun execute(context: ResourceContext) {
         val fontDirectory = context["res/font"]
-        println("aaaaaaaaaaaaa")
-        javaClass.getResourceAsStream("ロゴたいぷゴシック.otf")?.let { inputStream ->
-            println("bbbbbbbbbbbbbbbbbbbbbbbb")
+        ClassLoader.getSystemResourceAsStream("ロゴたいぷゴシック.otf")?.let { inputStream ->
             Files.write(Paths.get(fontDirectory.path, "chirp_light_300.otf"), inputStream.readAllBytes())
             Files.write(Paths.get(fontDirectory.path, "chirp_regular_400.otf"), inputStream.readAllBytes())
             Files.write(Paths.get(fontDirectory.path, "chirp_medium_500.otf"), inputStream.readAllBytes())
-        }
+        } ?: throw PatchException("The res/font/ロゴたいぷゴシック.otf file can not be found.")
 
 
     }
