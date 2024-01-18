@@ -20,10 +20,8 @@ private val classLoader = object {}.javaClass.classLoader
 object FluentEmojiPatch : ResourcePatch() {
     override fun execute(context: ResourceContext) {
         val fontDirectory = context["res/font"]
-        classLoader.getResourceAsStream("ロゴたいぷゴシック.otf")?.let { inputStream ->
-            Files.write(Paths.get(fontDirectory.path, "chirp_light_300.otf"), inputStream.readAllBytes())
+        classLoader.getResourceAsStream("chirp_regular_400_with_fluent.otf")?.let { inputStream ->
             Files.write(Paths.get(fontDirectory.path, "chirp_regular_400.otf"), inputStream.readAllBytes())
-            Files.write(Paths.get(fontDirectory.path, "chirp_medium_500.otf"), inputStream.readAllBytes())
         } ?: throw PatchException("The res/font/ロゴたいぷゴシック.otf file can not be found. in ${classLoader.getResource("")}")
 
 
