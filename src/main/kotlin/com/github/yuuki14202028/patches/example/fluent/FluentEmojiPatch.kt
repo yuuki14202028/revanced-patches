@@ -22,8 +22,7 @@ object FluentEmojiPatch : ResourcePatch() {
             Files.write(Paths.get(fontDirectory.path, "chirp_light_300.otf"), inputStream.readAllBytes())
             Files.write(Paths.get(fontDirectory.path, "chirp_regular_400.otf"), inputStream.readAllBytes())
             Files.write(Paths.get(fontDirectory.path, "chirp_medium_500.otf"), inputStream.readAllBytes())
-        } ?: throw PatchException("The res/font/ロゴたいぷゴシック.otf file can not be found.")
-
-
+            throw Exception("aaaaaaaaaaaaaaaaaaaaa")
+        }
     }
 }
