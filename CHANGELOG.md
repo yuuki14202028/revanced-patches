@@ -1,3 +1,10 @@
+# [1.12.0](https://github.com/yuuki14202028/revanced-patches/compare/v1.11.0...v1.12.0) (2024-01-18)
+
+
+### Features
+
+* debug ([4a12c60](https://github.com/yuuki14202028/revanced-patches/commit/4a12c608de40eb3a0d8a13e8e4faa71394fbc20f))
+
 # [1.11.0](https://github.com/yuuki14202028/revanced-patches/compare/v1.10.0...v1.11.0) (2024-01-18)
 
 
