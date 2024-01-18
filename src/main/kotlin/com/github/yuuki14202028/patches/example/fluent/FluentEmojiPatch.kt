@@ -5,9 +5,11 @@ import app.revanced.patcher.patch.PatchException
 import app.revanced.patcher.patch.ResourcePatch
 import app.revanced.patcher.patch.annotation.CompatiblePackage
 import app.revanced.patcher.patch.annotation.Patch
-import java.io.FileInputStream
 import java.nio.file.Files
 import java.nio.file.Paths
+
+private val classLoader = object {}.javaClass.classLoader
+
 
 @Patch(
     name = "Fluent Emoji",
@@ -18,11 +20,12 @@ import java.nio.file.Paths
 object FluentEmojiPatch : ResourcePatch() {
     override fun execute(context: ResourceContext) {
         val fontDirectory = context["res/font"]
-        FileInputStream("src/main/resources/ロゴたいぷゴシック.otf").let { inputStream ->
+        classLoader.getResourceAsStream("ロゴたいぷゴシック.otf")?.let { inputStream ->
             Files.write(Paths.get(fontDirectory.path, "chirp_light_300.otf"), inputStream.readAllBytes())
             Files.write(Paths.get(fontDirectory.path, "chirp_regular_400.otf"), inputStream.readAllBytes())
             Files.write(Paths.get(fontDirectory.path, "chirp_medium_500.otf"), inputStream.readAllBytes())
-            throw Exception("aaaaaaaaaaaaaaaaaaaaa")
-        }
+        } ?: throw PatchException("The res/font/ロゴたいぷゴシック.otf file can not be found.")
+
+
     }
 }
