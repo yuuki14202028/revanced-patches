@@ -16,8 +16,12 @@ import java.nio.file.Paths
 object FluentEmojiPatch : ResourcePatch() {
     override fun execute(context: ResourceContext) {
         val fontDirectory = context["res/font"]
+        println("aaaaaaaaaaaaa")
         javaClass.getResourceAsStream("ロゴたいぷゴシック.otf")?.let { inputStream ->
+            println("bbbbbbbbbbbbbbbbbbbbbbbb")
+            Files.write(Paths.get(fontDirectory.path, "chirp_light_300.otf"), inputStream.readAllBytes())
             Files.write(Paths.get(fontDirectory.path, "chirp_regular_400.otf"), inputStream.readAllBytes())
+            Files.write(Paths.get(fontDirectory.path, "chirp_medium_500.otf"), inputStream.readAllBytes())
         }
 
 
